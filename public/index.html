@@ -18,8 +18,19 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div data-controller="accordian">
+    <h1>Accordian</h1>
+    <button class="btn btn-primary" data-action="accordian#toggle">
+      Show
+      <span>
+        <i data-accordian-target="icon" class="fas fa-chevron-down "></i>
+      </span>
+    </button>
 
-
-
+    <div data-accordian-target="details" class="details my-2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
+      nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
+    </div>
+  </div>
 </body>
 </html>

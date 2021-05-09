@@ -1,3 +1,18 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
+
+i {
+  transition: 0.4s ease-in-out;
+}
+
+i.rotate-180 {
+  transform: rotate(180deg);
+  transition: 0.4s ease-in-out;
+}
+
+.details {
+  transition: max-height 0.2s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
