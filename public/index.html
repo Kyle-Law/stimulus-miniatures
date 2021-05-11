@@ -24,8 +24,8 @@
 </head>
 <body>
   <div class="container">
-    <div data-controller="accordian">
-      <h1>Accordian</h1>
+    <div data-controller="accordian" class="border p-3">
+      <h3>Feature 1 - Accordian</h3>
       <button class="btn btn-primary" data-action="accordian#toggle">
         Show
         <span>
@@ -39,21 +39,36 @@
       </div>
     </div>
 
-    <div class="counters-container row">
-      <div class="col-6" data-controller="counter" data-counter-score-value="0">
+    <div class="counters-container d-flex border p-3">
+      <h3>Feature 2 - Counter</h3>
+      <div class="mr-5" data-controller="counter" data-counter-score-value="0">
         Red Team
         <h2 data-counter-target="display" ></h2>
         <button class="btn btn-danger" data-action="counter#decrease">-</button>
         <button class="btn btn-success" data-action="counter#increase">+</button>
       </div>
 
-      <div class="col-6" data-controller="counter" data-counter-score-value="0">
+      <div class="" data-controller="counter" data-counter-score-value="0">
         Blue Team
         <h2 data-counter-target="display"></h2>
         <button class="btn btn-danger" data-action="counter#decrease">-</button>
         <button class="btn btn-success" data-action="counter#increase">+</button>
       </div>
     </div>
+
+    <div class="border p-3" data-controller="dynamic-search" data-dynamic-search-items-value='[{"name":"apple","color":"red"},{"name":"orange","color":"yellow"},{"name":"pineapple","color":"yellow"},{"name":"grape","color":"purple"},{"name":"mango","color":"yellow"},{"name":"blueberry","color":"blue"}]'
+     data-dynamic-search-attribute-value="name">
+      <h3>Feature 3 - Dynamic Search</h3>
+      <input type="text" data-action="dynamic-search#filter" data-dynamic-search-target="input"
+      >
+      <div data-dynamic-search-target="container">
+      </div>
+    </div>
+
+    <h1 data-controller="example" data-action="click->example#log" data-example-score-value="asdf">
+        loading...
+        <div data-example-score-value="score2"></div>
+    </h1>
   </div>
 
 </body>
