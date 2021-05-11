@@ -23,7 +23,10 @@
 
 </head>
 <body>
+
   <div class="container">
+    <h1>Stimulus Miniatures</h1>
+    <h4>My StimulusJS Mini-Projects</h4>
     <div data-controller="accordian" class="border p-3">
       <h3>Feature 1 - Accordian</h3>
       <button class="btn btn-primary" data-action="accordian#toggle">
@@ -39,20 +42,22 @@
       </div>
     </div>
 
-    <div class="counters-container d-flex border p-3">
+    <div class="counters-container border p-3">
       <h3>Feature 2 - Counter</h3>
-      <div class="mr-5" data-controller="counter" data-counter-score-value="0">
-        Red Team
-        <h2 data-counter-target="display" ></h2>
-        <button class="btn btn-danger" data-action="counter#decrease">-</button>
-        <button class="btn btn-success" data-action="counter#increase">+</button>
-      </div>
+      <div class="d-flex">
+        <div class="mr-5" data-controller="counter" data-counter-score-value="0">
+          Red Team
+          <h2 data-counter-target="display" ></h2>
+          <button class="btn btn-danger" data-action="counter#decrease">-</button>
+          <button class="btn btn-success" data-action="counter#increase">+</button>
+        </div>
 
-      <div class="" data-controller="counter" data-counter-score-value="0">
-        Blue Team
-        <h2 data-counter-target="display"></h2>
-        <button class="btn btn-danger" data-action="counter#decrease">-</button>
-        <button class="btn btn-success" data-action="counter#increase">+</button>
+        <div class="" data-controller="counter" data-counter-score-value="0">
+          Blue Team
+          <h2 data-counter-target="display"></h2>
+          <button class="btn btn-danger" data-action="counter#decrease">-</button>
+          <button class="btn btn-success" data-action="counter#increase">+</button>
+        </div>
       </div>
     </div>
 
