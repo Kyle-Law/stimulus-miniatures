@@ -2,15 +2,17 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
 
-  static values={expiry:Number}
+  static values={expiry:Number,duration:Number}
 
-  static targets=["dateTimeInput","display","startBtn","stopBtn"]
+  static targets=["dateTimeInput","display","startBtn","stopBtn","durationInput"]
 
   static timerInterval
 
   connect() {
     console.log("Timer controller is connected")
-    this.setInitialValues()
+    if (this.hasDateTimeInputTarget){
+      this.setInitialValues()
+    }
   }
 
   setInitialValues(){
@@ -22,18 +24,29 @@ export default class extends Controller {
   }
 
   start(){
-    this.expiryValue = new Date(this.dateTimeInputTarget.value).getTime()
-    console.log(this.expiryValue)
+    if (this.hasDateTimeInputTarget){
+      this.expiryValue = new Date(this.dateTimeInputTarget.value).getTime()
+    }
+    if (this.hasDurationInputTarget){
+      this.durationValue = this.durationInputTarget.value * 60
+    }
     clearInterval(this.timerInterval);
-    // this.hideSelection()
     // Update the count down every 1 second
     this.timerInterval = setInterval(() => {
 
       // Get today's date and time (in ms)
       const now = new Date().getTime();
 
+      let difference
       // Find the difference between now and the count down date
-      const difference = this.expiryValue - now;
+      if (this.hasDateTimeInputTarget){
+        difference = this.expiryValue - now;
+      }
+
+      if (this.hasDurationValue) {
+        this.durationValue--
+        difference = this.durationValue * 1000
+      }
 
       // Time calculations for days, hours, minutes and seconds. 1s = 1000ms
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -48,7 +61,6 @@ export default class extends Controller {
       if (difference < 0) {
         clearInterval(this.timerInterval);
         this.displayTarget.innerHTML = "EXPIRED";
-        this.showSelection()
       }
     }, 1000);
   }
@@ -56,19 +68,18 @@ export default class extends Controller {
   stop(){
     clearInterval(this.timerInterval)
     this.displayTarget.innerHTML = ""
-    // this.showSelection()
   }
 
-  hideSelection(){
-    this.dateTimeInputTarget.hidden = true
-    this.startBtnTarget.hidden = true
-    this.stopBtnTarget.hidden=false
-  }
+  // hideSelection(){
+  //   this.dateTimeInputTarget.hidden = true
+  //   this.startBtnTarget.hidden = true
+  //   this.stopBtnTarget.hidden=false
+  // }
 
-  showSelection(){
-    this.dateTimeInputTarget.hidden = false
-    this.startBtnTarget.hidden = false
-    this.stopBtnTarget.hidden=true
-  }
+  // showSelection(){
+  //   this.dateTimeInputTarget.hidden = false
+  //   this.startBtnTarget.hidden = false
+  //   this.stopBtnTarget.hidden=true
+  // }
 
 }

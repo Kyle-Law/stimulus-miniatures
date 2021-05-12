@@ -89,16 +89,22 @@
         <i class="fas fa-sun" data-dark-light-target="icon"></i>
       </button>
     </div>
-    <div class="border p-3" data-controller="price" data-price-price-value="50">
+    <div class="border p-3" data-controller="slider" data-slider-input-value="50">
       <h3>Feature 6 - Price Slider</h3>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange" data-action="price#setPrice">
-      <h6>Price: <span data-price-target="display"></span></h6>
+      <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
+      <h6>Price: <span data-slider-target="inputDisplay"></span></h6>
     </div>
     <div class="border p-3" data-controller="timer" data-timer-expiry-value="0">
       <h3>Feature 7 - Countdown Timer</h3>
       <input type="datetime-local" min="" data-timer-target="dateTimeInput" class="form-control">
       <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start Count Down</button>
       <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
+      <h4 data-timer-target="display" class="text-center text-primary"></h4>
+    </div>
+    <div class="border p-3" data-controller="timer slider" data-timer-duration-value="60" data-slider-input-value="60">
+      <h3>Feature 8 - Pomodoro App</h3>
+      <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1" max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span> minutes</small>
+      <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start</button>
       <h4 data-timer-target="display" class="text-center text-primary"></h4>
     </div>
 
