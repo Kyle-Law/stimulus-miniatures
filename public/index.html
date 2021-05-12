@@ -105,9 +105,19 @@
       <h3>Feature 8 - Pomodoro App</h3>
       <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1" max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span> minutes</small>
       <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start</button>
+      <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
       <h4 data-timer-target="display" class="text-center text-primary"></h4>
     </div>
-
+    <div class="border p-3">
+      <h3>Feature 9 - TypeWriter Effect</h3>
+      <div data-controller="typewriter" data-typewriter-text-value='["a Full Stack Software Engineer.","a Amateur Chess Player.","from Johor Bahru, Malaysia."]'>
+        <h6 class="text-success">Hi, here is Kyle, <span data-typewriter-target="display"></span> </h6>
+      </div>
+      <div data-controller="typewriter"
+      data-typewriter-text-value='["a modest JS Framework built by Basecamp.","released in Feb 2018, updated to 2.0.0 in Dec 2020 with new Value & Class API..","a component of Hotwire."]'>
+        <h6 class="text-primary">Hi, here is StimulusJS, <span data-typewriter-target="display"></span> </h6>
+      </div>
+    </div>
   </div>
 
 </body>
