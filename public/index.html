@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StimulusJS Miniatures</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
   <script src="bundle.js" async></script>
@@ -27,8 +28,17 @@
   <div class="container">
     <h1>Stimulus Miniatures</h1>
     <h4>My StimulusJS Mini-Projects</h4>
+
+    <div data-controller="clipboard" class="border p-3">
+      <h3>Feature 1 - Copy to Clipboard</h3>
+      <input data-clipboard-target="toCopy" type="text">
+      <button data-action="clipboard#copy" data-clipboard-target="copyBtn" class="btn btn-success">
+        <i class="far fa-clipboard" aria-hidden="true"></i>
+      </button>
+    </div>
+
     <div data-controller="accordian" class="border p-3">
-      <h3>Feature 1 - Accordian</h3>
+      <h3>Feature 2 - Accordian</h3>
       <button class="btn btn-primary" data-action="accordian#toggle">
         Show
         <span>
@@ -38,16 +48,18 @@
 
       <div data-accordian-target="details" class="details my-2">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
+        nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
+        nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
         nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
       </div>
     </div>
 
     <div class="counters-container border p-3">
-      <h3>Feature 2 - Counter</h3>
+      <h3>Feature 3 - Counter</h3>
       <div class="d-flex">
         <div class="mr-5" data-controller="counter" data-counter-score-value="0">
           Red Team
-          <h2 data-counter-target="display" ></h2>
+          <h2 data-counter-target="display"></h2>
           <button class="btn btn-danger" data-action="counter#decrease">-</button>
           <button class="btn btn-success" data-action="counter#increase">+</button>
         </div>
@@ -61,19 +73,23 @@
       </div>
     </div>
 
-    <div class="border p-3" data-controller="dynamic-search" data-dynamic-search-items-value='[{"name":"apple","color":"red"},{"name":"orange","color":"yellow"},{"name":"pineapple","color":"yellow"},{"name":"grape","color":"purple"},{"name":"mango","color":"yellow"},{"name":"blueberry","color":"blue"}]'
+    <div class="border p-3 bg-dark" data-controller="dynamic-search" data-dynamic-search-items-value='[{"name":"apple","color":"red"},{"name":"orange","color":"yellow"},{"name":"pineapple","color":"yellow"},{"name":"grape","color":"purple"},{"name":"mango","color":"yellow"},{"name":"blueberry","color":"blue"}]'
      data-dynamic-search-attribute-value="name">
-      <h3>Feature 3 - Dynamic Search</h3>
-      <input type="text" data-action="dynamic-search#filter" data-dynamic-search-target="input"
+      <h3 class="text-light">Feature 4 - Dynamic Search</h3>
+      <button data-action="dynamic-search#sortByName">Sort by Name</button>
+      <button data-action="dynamic-search#sortByColor">Sort by Color</button>
+      <input type="text" data-action="dynamic-search#filter" data-dynamic-search-target="input" placeholder="Search by name"
       >
       <div data-dynamic-search-target="container">
       </div>
     </div>
+    <div class="border p-3" data-controller="dark-light" data-dark-light-target="container">
+      <h3>Feature 5 - Dark Light mode</h3>
+      <button data-dark-light-mode-value="light" data-dark-light-target="toggler" data-action="dark-light#toggleMode" class="btn btn-secondary">
+        <i class="fas fa-sun" data-dark-light-target="icon"></i>
+      </button>
+    </div>
 
-    <h1 data-controller="example" data-action="click->example#log" data-example-score-value="asdf">
-        loading...
-        <div data-example-score-value="score2"></div>
-    </h1>
   </div>
 
 </body>

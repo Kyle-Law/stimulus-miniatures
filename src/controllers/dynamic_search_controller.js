@@ -3,17 +3,17 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
   static targets = ["container","input"]
-  static values = {attribute: String, items: Array, filteredArray:Array}
+  static values = {attribute: String, items: Array, originalArray:Array}
 
   connect() {
-    this.filteredArray = this.itemsValue
+    this.originalArray = this.itemsValue
     console.log('dynamic search controller connected')
     this.paintDOM()
   }
 
   filter(){
     const searchTerm = this.inputTarget.value
-    this.itemsValue = this.filteredArray.filter(item => item.name.includes(searchTerm))
+    this.itemsValue = this.originalArray.filter(item => item.name.includes(searchTerm))
   }
 
   itemsValueChanged(){
@@ -25,6 +25,7 @@ export default class extends Controller {
     this.itemsValue.forEach(item => {
       const p = document.createElement('p')
       p.textContent = item.name
+      p.classList.add(`text-${item.color}`)
       domNodes.push(p)
       this.containerTarget.appendChild(p)
     });
@@ -33,6 +34,14 @@ export default class extends Controller {
     domNodes.forEach(node => {
       this.containerTarget.appendChild(node)
     })
+  }
+
+  sortByColor(){
+    this.itemsValue = this.originalArray.sort((a,b) => a['color'] > b['color'] ? 1 : -1)
+  }
+
+  sortByName(){
+    this.itemsValue = this.originalArray.sort((a,b) => a['name'] > b['name'] ? 1 : -1 )
   }
 
 

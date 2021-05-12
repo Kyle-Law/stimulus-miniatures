@@ -16,3 +16,19 @@ i.rotate-180 {
   max-height: 0;
   overflow: hidden;
 }
+
+.text-blue {
+  color: lightblue;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-purple {
+  color: rgb(155, 131, 155);
+}
+
+.text-yellow {
+  color: yellow;
+}
