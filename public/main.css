@@ -2,6 +2,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 
+/* FE2 - Accordian */
 i {
   transition: 0.4s ease-in-out;
 }
@@ -21,6 +22,7 @@ i.rotate-180 {
   cursor: pointer;
 }
 
+/*  FE4 - Dynamic Search */
 .text-blue {
   color: lightblue;
 }
@@ -41,6 +43,7 @@ i.rotate-180 {
   box-sizing: border-box;
 }
 
+/* FE11 - Todo App */
 /* Style the list (remove margins and bullets, etc) */
 .closeable-lists {
   list-style-type: none;
@@ -87,6 +90,7 @@ i.rotate-180 {
   background-color: rgb(179, 237, 222)
 }
 
+/* FE12 - Modal */
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -101,7 +105,7 @@ i.rotate-180 {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Container */
 .modal-container {
   background-color: #f2f2f2;
   margin: 15% auto; /* 15% from the top and centered */
@@ -125,6 +129,7 @@ i.rotate-180 {
   cursor: pointer;
 }
 
+/* FE13 - Progress Bar */
 /* The progress container (grey background) */
 .progress-container {
   width: 100%;
@@ -143,6 +148,8 @@ i.rotate-180 {
   height: 50vh;
   overflow: scroll;
 }
+
+/* FE14 - Snackbar */
 /* The snackbar - position it at the bottom and in the middle of the screen */
 .snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
@@ -187,4 +194,45 @@ i.rotate-180 {
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+
+/* Tooltip */
+.tooltip-item {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #ccc;
+  color: #006080;
+}
+
+.tooltip-item .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-item .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-item:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
