@@ -13,7 +13,7 @@ export default class extends Controller {
       const li = document.createElement('li')
       li.setAttribute('data-action','click->todo#done')
       li.innerHTML = `${this.inputTarget.value} <span data-action="click->todo#remove" class="close">&times;</span>`
-      this.containerTarget.appendChild(li)
+      this.containerTarget.insertAdjacentElement('afterbegin',li)
       e.target.reset()
     }
   }
