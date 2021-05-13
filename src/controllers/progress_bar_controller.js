@@ -9,12 +9,10 @@ export default class extends Controller {
   }
 
   start(){
-    if (this.currentProgressValue == 100 || this.currentProgressValue == 1) {
-      this.currentProgressValue = 1;
-      const progressInterval = setInterval(()=> {
-        this.currentProgressValue >= 100 ? clearInterval(progressInterval) : this.currentProgressValue++;
-      }, 10);
-    }
+    this.currentProgressValue = 1;
+    const progressInterval = setInterval(()=> {
+      this.currentProgressValue >= 100 ? clearInterval(progressInterval) : this.currentProgressValue++;
+    }, 10);
   }
 
   currentProgressValueChanged(){
