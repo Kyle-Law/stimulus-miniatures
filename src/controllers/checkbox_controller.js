@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["container"]
 
   connect() {
-    console.log("This controller is connected")
+    console.log("Checkbox controller is connected")
   }
 
   selectAll(){

@@ -135,6 +135,19 @@
         <input type="checkbox" id="apple"><label for="apple">Apple</label>
       </div>
     </div>
+    <div class="border p-3">
+      <h3>Feature 11 - Todo List</h3>
+      <div data-controller="todo">
+        <form class="row pl-3 my-3" data-action="todo#add">
+          <input type="text" data-todo-target="input" class="form-control col-4 mr-2"><button class="btn btn-primary col-2">Add Todo</button>
+        </form>
+        <ul  class="closeable-lists" data-todo-target="container">
+          <li data-action="click->todo#done">Do the laundry <span data-action="click->todo#remove" class="close">&times;</span></li>
+          <li data-action="click->todo#done">Meditate 10 minutes <span data-action="click->todo#remove" class="close">&times;</span></li>
+          <li data-action="click->todo#done">Code 1 hour <span data-action="click->todo#remove" class="close">&times;</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 </body>

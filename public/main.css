@@ -32,3 +32,53 @@ i.rotate-180 {
 .text-yellow {
   color: yellow;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the list (remove margins and bullets, etc) */
+.closeable-lists {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the list items */
+.closeable-lists li {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #f4cdcd;
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Add a light grey background color on hover */
+.closeable-lists li:hover {
+  background-color: rgb(235, 196, 196);
+}
+
+/* Style the close button (span) */
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: rgb(191, 160, 160);}
+
+.closeable-lists .crossed {
+  text-decoration: line-through;
+  background-color: rgb(196, 235, 225)
+}
+
+.closeable-lists .crossed:hover {
+  background-color: rgb(179, 237, 222)
+}
