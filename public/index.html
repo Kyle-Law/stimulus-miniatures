@@ -103,7 +103,7 @@
     </div>
     <div class="border p-3" data-controller="timer slider" data-timer-duration-value="60" data-slider-input-value="60">
       <h3>Feature 8 - Pomodoro App</h3>
-      <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1" max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span> minutes</small>
+      <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1" max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span> minutes</small><br/>
       <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start</button>
       <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
       <h4 data-timer-target="display" class="text-center text-primary"></h4>
@@ -114,8 +114,25 @@
         <h6 class="text-success">Hi, here is Kyle, <span data-typewriter-target="display"></span> </h6>
       </div>
       <div data-controller="typewriter"
-      data-typewriter-text-value='["a modest JS Framework built by Basecamp.","released in Feb 2018, updated to 2.0.0 in Dec 2020 with new Value & Class API..","a component of Hotwire."]'>
+      data-typewriter-text-value='["a modest JS Framework built by Basecamp.","released in Feb 2018, updated to 2.0.0 in Dec 2020.","a component of Hotwire."]'>
         <h6 class="text-primary">Hi, here is StimulusJS, <span data-typewriter-target="display"></span> </h6>
+      </div>
+    </div>
+    <div class="border p-3">
+      <h3>Feature 10 - Select / De-select All</h3>
+      <div data-controller="checkbox" data-checkbox-target="container">
+        <button data-action="checkbox#selectAll" class="btn btn-primary">Select All</button>
+        <button data-action="checkbox#deselectAll" class="btn btn-secondary">De-select All</button><br>
+        <input type="checkbox" id="pineapple"><label for="pineapple">Pineapple</label><br>
+        <input type="checkbox" id="orange"><label for="orange">Orange</label><br>
+      </div>
+      <div data-controller="checkbox" data-checkbox-target="container">
+        <button data-action="checkbox#selectAll" class="btn btn-primary">Select All</button>
+        <button data-action="checkbox#deselectAll" class="btn btn-secondary">De-select All</button><br>
+        <input type="checkbox" id="blueberry"><label for="blueberry">Blueberry</label><br>
+        <input type="checkbox" id="avocado"><label for="avocado">Avocado</label><br>
+        <input type="checkbox" id="carrot"><label for="carrot">Carrot</label><br>
+        <input type="checkbox" id="apple"><label for="apple">Apple</label>
       </div>
     </div>
   </div>
