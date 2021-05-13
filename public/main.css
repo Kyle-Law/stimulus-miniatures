@@ -124,3 +124,22 @@ i.rotate-180 {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+.scroll-content {
+  height: 50vh;
+  overflow: scroll;
+}
