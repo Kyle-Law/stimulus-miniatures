@@ -24,7 +24,7 @@ StimulusJS is ...
 |10|Select/De-select All||
 |11|Todo List||
 |12|Modal||
-|13|Progress Bar||
+|13|Scroll Indicator||
 |14|Snackbar||
 
 ## Built With

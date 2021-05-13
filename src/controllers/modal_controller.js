@@ -9,14 +9,12 @@ export default class extends Controller {
   }
 
   close(e){
-    console.log('close modal')
     if (e.target == this.modalTarget || e.target == this.closeBtnTarget) {
       this.modalTarget.style.display = "none";
     }
   }
 
   open(){
-    console.log('open modal')
     this.modalTarget.style.display = "block";
   }
 

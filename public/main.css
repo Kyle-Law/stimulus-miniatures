@@ -236,3 +236,15 @@ i.rotate-180 {
   visibility: visible;
   opacity: 1;
 }
+
+/* FE15 - Progress Bar */
+.outer-bar {
+  width: 100%;
+  background-color: #eee;
+}
+
+.inner-bar {
+  width: 1%;
+  height: 30px;
+  background-color: #04aa2b;
+}
