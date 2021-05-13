@@ -148,7 +148,36 @@
         </ul>
       </div>
     </div>
+    <div class="border p-3">
+      <h3>Feature 12 - Modal</h3>
+      <div data-controller="modal" data-action="click@window->modal#close">
+        <button data-action="modal#open" class="btn btn-primary">Open First Modal</button>
+        <div class="modal" data-modal-target="modal">
+          <!-- Modal container -->
+          <div class="modal-container">
+            <span class="float-right h3 px-2 btn btn-outline-dark cursor-pointer" data-modal-target="closeBtn" data-action="click->modal#close">&times;</span>
+            <h4>First Modal Title</h4><hr>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempore labore omnis vero consectetur quo fugit nobis facere et illo ipsam velit sed culpa tempora officia ex, at non minima?</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-controller="modal" data-action="click@window->modal#close" class="mt-3">
+        <button data-action="modal#open" class="btn btn-primary">Open Second Modal</button>
+        <div class="modal" data-modal-target="modal">
+          <!-- Modal container -->
+          <div class="modal-container">
+            <span class="float-right h3 px-2 btn btn-outline-dark cursor-pointer" data-modal-target="closeBtn"
+              data-action="click->modal#close">&times;</span>
+            <h4>Second Modal Title</h4>
+            <hr>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempore labore omnis vero consectetur quo fugit nobis facere et illo ipsam velit sed culpa tempora officia ex, at non minima? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, quisquam odio molestias voluptates in ea error perspiciatis. Harum dolores quas, quam quibusdam laborum, odit ipsam perferendis illum vero, beatae porro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
 
 </body>
 </html>
