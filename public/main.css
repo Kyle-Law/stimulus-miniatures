@@ -257,7 +257,7 @@ i.rotate-180 {
 }
 
 /* Hide the images by default */
-.mySlides {
+.display-none {
   display: none;
 }
 
@@ -286,7 +286,7 @@ i.rotate-180 {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(46, 46, 46, 0.495);
+  background-color: rgba(198, 198, 198, 0.495);
   color: rgb(222, 222, 222);
 }
 
@@ -328,19 +328,17 @@ i.rotate-180 {
 }
 
 /* Fading animation */
-.fading {
-  -webkit-animation-name: fading;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fading;
-  animation-duration: 1.5s;
+.fade-in {
+  -webkit-animation: fade-in 1.5s ease-in forwards;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
-@-webkit-keyframes fading {
-  from {opacity: .4}
+@-webkit-keyframes fade-in {
+  from {opacity: .5}
   to {opacity: 1}
 }
 
-@keyframes fading {
-  from {opacity: .4}
+@keyframes fade-in {
+  from {opacity: .5}
   to {opacity: 1}
 }
