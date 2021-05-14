@@ -26,6 +26,9 @@ StimulusJS is ...
 |12|Modal||
 |13|Scroll Indicator||
 |14|Snackbar||
+|15|Progress Bar||
+|16|Slideshow (d-block/d-none)||
+|17|Slideshow (Horizontal Scrolling)||
 
 ## Built With
 

@@ -357,8 +357,6 @@ i.rotate-180 {
 }
 
 .slideshow2-container {
-  height: 500px;
-  width: 800px;
   border-radius: 5px;
   overflow: hidden;
   margin: 0 auto;
