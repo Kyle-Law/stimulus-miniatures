@@ -10,9 +10,9 @@ export default class extends Controller {
   toggle(){
     this.iconTarget.classList.toggle('rotate-180')
     if (this.detailsTarget.style.maxHeight) {
-        this.detailsTarget.style.maxHeight = null;
-      } else {
-        this.detailsTarget.style.maxHeight = this.detailsTarget.scrollHeight + "px";
-      }
+      this.detailsTarget.style.maxHeight = null;
+    } else {
+      this.detailsTarget.style.maxHeight = this.detailsTarget.scrollHeight + "px";
+    }
   }
 }
