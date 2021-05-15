@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>StimulusJS Miniatures</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
   <script src="bundle.js" async></script>
-  <!-- Font Awesome CDN -->
+
+  <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!-- Bootstrap CDN -->
+  <!-- Bootstrap JS CDNs -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
@@ -21,6 +22,7 @@
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
@@ -30,50 +32,31 @@
     <div class="float-right">
       <a href="https://github.com/Kyle-Law/stimulus-miniatures" target="_blank" class="h1"><i class="fab fa-github-square"></i></a>
     </div>
-    <h1>Stimulus Miniatures</h1>
+    <h1>StimulusJS Miniatures</h1>
     <h4 class="my-4 text-center text-success">Section 1</h4>
       <div class="border p-3">
         <h3>Feature 1 - Copy to Clipboard</h3>
         <div class="d-flex">
-          <div data-controller="clipboard">
-            <input data-clipboard-target="toCopy" type="text">
-            <button data-action="clipboard#copy" data-clipboard-target="copyBtn"
+          <div>
+            <input type="text">
+            <button
               class="btn btn-success tooltip-item cursor-pointer">
               <i class="far fa-clipboard" aria-hidden="true"></i>
-              <span class="tooltip-text small" data-clipboard-target="tooltip">Copy to clipboard</span>
+              <span class="tooltip-text small">Copy to clipboard</span>
             </button>
-          </div>
-          <div data-controller="clipboard" class="ml-5">
-            <button data-clipboard-target="toCopy" data-action="clipboard#copy" class="btn btn-primary tooltip-item">Text to copy</button>
           </div>
         </div>
       </div>
       <div class="border p-3">
         <h3>Feature 2 - Accordian</h3>
-        <div data-controller="accordian">
-          <button class="btn btn-primary" data-action="accordian#toggle">
+        <div>
+          <button class="btn btn-primary">
             Show
             <span>
-              <i data-accordian-target="icon" class="fas fa-chevron-down "></i>
+              <i class="fas fa-chevron-down "></i>
             </span>
           </button>
-          <div data-accordian-target="details" class="details my-2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
-            nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
-            nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
-            nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
-          </div>
-        </div>
-        <div data-controller="accordian">
-          <button class="btn btn-primary" data-action="accordian#toggle">
-            Show
-            <span>
-              <i data-accordian-target="icon" class="fas fa-chevron-down "></i>
-            </span>
-          </button>
-          <div data-accordian-target="details" class="details my-2">
+          <div class="details my-2">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
             nesciunt. Culpa earum esse impedit quas? Eum perspiciatis asperiores laudantium nostrum magni officiis ipsum ipsa!
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error quidem a, cumque voluptates dolorem
@@ -86,58 +69,33 @@
       <div class="counters-container border p-3">
         <h3>Feature 3 - Counter</h3>
         <div class="d-flex">
-          <div class="" data-controller="counter" data-counter-score-value="0">
+          <div class="">
             Red Team
-            <h2 data-counter-target="display"></h2>
-            <button class="btn btn-danger" data-action="counter#decrease">-</button>
-            <button class="btn btn-success" data-action="counter#increase">+</button>
-          </div>
-
-          <div class="ml-5" data-controller="counter" data-counter-score-value="0">
-            Blue Team
-            <h2 data-counter-target="display"></h2>
-            <button class="btn btn-danger" data-action="counter#decrease">-</button>
-            <button class="btn btn-success" data-action="counter#increase">+</button>
+            <h2></h2>
+            <button class="btn btn-danger">-</button>
+            <button class="btn btn-success">+</button>
           </div>
         </div>
       </div>
-      <div class="border p-3" data-controller="dark-light" data-dark-light-target="container">
+      <div class="border p-3">
         <h3>Feature 4 - Dark Light mode</h3>
-        <button data-dark-light-mode-value="light" data-dark-light-target="toggler" data-action="dark-light#toggleMode"
+        <button
           class="btn btn-secondary">
           <i class="fas fa-sun" data-dark-light-target="icon"></i>
         </button>
       </div>
       <div class="border p-3">
         <h3>Feature 5 - Price Slider</h3>
-        <div data-controller="slider" data-slider-input-value="50">
-          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
-          <h6>Price: <span data-slider-target="inputDisplay"></span></h6>
-        </div>
-        <div data-controller="slider" data-slider-input-value="50">
-          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
-          <h6>Weight: <span data-slider-target="inputDisplay"></span></h6>
-        </div>
-        <div data-controller="slider" data-slider-input-value="50">
-          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
-          <h6>Height: <span data-slider-target="inputDisplay"></span></h6>
-        </div>
-        <div data-controller="slider" data-slider-input-value="50">
-          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
-          <h6>Score: <span data-slider-target="inputDisplay"></span></h6>
+        <div>
+          <input type="range" min="1" max="100" value="50">
+          <h6>Price: <span></span></h6>
         </div>
       </div>
       <div class="border p-3">
         <h3>Feature 6 - Select / De-select All</h3>
-        <div data-controller="checkbox" data-checkbox-target="container">
-          <button data-action="checkbox#selectAll" class="btn btn-primary">Select All</button>
-          <button data-action="checkbox#deselectAll" class="btn btn-secondary">De-select All</button><br>
-          <input type="checkbox" class="mr-3" id="pineapple"><label for="pineapple">Pineapple</label><br>
-          <input type="checkbox" class="mr-3" id="orange"><label for="orange">Orange</label><br>
-        </div>
-        <div data-controller="checkbox" data-checkbox-target="container">
-          <button data-action="checkbox#selectAll" class="btn btn-primary">Select All</button>
-          <button data-action="checkbox#deselectAll" class="btn btn-secondary">De-select All</button><br>
+        <div>
+          <button class="btn btn-primary">Select All</button>
+          <button class="btn btn-secondary">De-select All</button><br>
           <input type="checkbox" class="mr-3" id="blueberry"><label for="blueberry">Blueberry</label><br>
           <input type="checkbox" class="mr-3" id="avocado"><label for="avocado">Avocado</label><br>
           <input type="checkbox" class="mr-3" id="carrot"><label for="carrot">Carrot</label><br>
@@ -146,45 +104,28 @@
       </div>
       <div class="border p-3">
         <h3>Feature 7 - Progress Bar</h3>
-        <div data-controller="progress-bar" data-progress-bar-current-progress-value="1">
+        <div>
           <div class="outer-bar">
-            <div class="inner-bar bg-success" data-progress-bar-target="innerBar"></div>
+            <div class="inner-bar bg-success"></div>
           </div>
-          <p class="float-right text-success" data-progress-bar-target="progress"></p>
-          <button class="btn btn-success my-2" data-action="progress-bar#start">Start</button>
-          <button class="btn btn-danger my-2" data-action="progress-bar#reset">Reset</button>
-        </div>
-        <div data-controller="progress-bar" data-progress-bar-current-progress-value="1">
-          <div class="outer-bar">
-            <div class="inner-bar bg-primary" data-progress-bar-target="innerBar"></div>
-          </div>
-          <p class="float-right text-primary" data-progress-bar-target="progress"></p>
-          <button class="btn btn-primary my-2" data-action="progress-bar#start">Start</button>
-          <button class="btn btn-danger my-2" data-action="progress-bar#reset">Reset</button>
+          <p class="float-right text-success"></p>
+          <button class="btn btn-success my-2">Start</button>
+          <button class="btn btn-danger my-2">Reset</button>
         </div>
       </div>
-      <div class="border p-3" data-controller="timer" data-timer-expiry-value="0">
+      <div class="border p-3">
         <h3>Feature 8 - Countdown Timer</h3>
-        <input type="datetime-local" min="" data-timer-target="dateTimeInput" class="form-control w-50">
-        <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start Count Down</button>
-        <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
-        <h4 data-timer-target="display" class="text-center text-primary"></h4>
+        <input type="datetime-local" min="" class="form-control w-50">
+        <button class="btn btn-primary mt-3">Start Count Down</button>
+        <button class="btn btn-secondary mt-3">Stop</button>
+        <h4 class="text-center text-primary"></h4>
       </div>
       <div class="border p-3">
         <h3>Feature 9 - Snackbar</h3>
         <div class="d-flex">
-          <div data-controller="snackbar">
-            <button class="btn btn-primary" data-action="snackbar#show">Show snackbar 1</button>
-            <div data-snackbar-target="snackbar" class="snackbar" style="left:25%;">Here is some message of Snackbar 1...
-            </div>
-          </div>
-          <div data-controller="snackbar">
-            <button class="btn btn-primary ml-3" data-action="snackbar#show">Show snackbar 2</button>
-            <div data-snackbar-target="snackbar" class="snackbar">Here is some message of Snackbar 2...</div>
-          </div>
-          <div data-controller="snackbar">
-            <button class="btn btn-primary ml-3" data-action="snackbar#show">Show snackbar 3</button>
-            <div data-snackbar-target="snackbar" class="snackbar" style="left:75%;">Here is some message of Snackbar 3...
+          <div>
+            <button class="btn btn-primary">Show snackbar 1</button>
+            <div class="snackbar">Here is some message of Snackbar 1...
             </div>
           </div>
         </div>
@@ -193,41 +134,34 @@
     <h4 class="my-3 text-center text-danger">Section 2</h4>
     <div class="border p-3">
       <h3>Feature 10 - Todo List</h3>
-      <div data-controller="todo">
-        <form class="row pl-3 my-3" data-action="todo#add">
-          <input type="text" data-todo-target="input" class="form-control col-4 mr-2"><button
+      <div>
+        <form class="row pl-3 my-3">
+          <input type="text" class="form-control col-4 mr-2"><button
             class="btn btn-primary col-2">Add Todo</button>
         </form>
-        <ul class="closeable-lists" data-todo-target="container">
-          <li data-action="click->todo#done">Do the laundry <span data-action="click->todo#remove"
-              class="close">&times;</span></li>
-          <li data-action="click->todo#done">Meditate 10 minutes <span data-action="click->todo#remove"
-              class="close">&times;</span></li>
-          <li data-action="click->todo#done">Code 1 hour <span data-action="click->todo#remove" class="close">&times;</span>
+        <ul class="closeable-lists">
+          <li>Do the laundry <span class="close">&times;</span></li>
+          <li>Meditate 10 minutes <span class="close">&times;</span></li>
+          <li>Code 1 hour <span class="close">&times;</span>
           </li>
         </ul>
       </div>
     </div>
     <div class="border p-3">
       <h3>Feature 11 - TypeWriter Effect</h3>
-      <div data-controller="typewriter"
-        data-typewriter-text-value='["a Full Stack Software Engineer.","a Amateur Chess Player.","from Johor Bahru, Malaysia."]'>
-        <h6 class="text-success">Hi, here is Kyle, <span data-typewriter-target="display"></span> </h6>
-      </div>
-      <div data-controller="typewriter"
-        data-typewriter-text-value='["a modest JS Framework built by Basecamp.","released in Feb 2018, updated to 2.0.0 in Dec 2020.","a component of Hotwire."]'>
-        <h6 class="text-primary">Hi, here is StimulusJS, <span data-typewriter-target="display"></span> </h6>
+      <div>
+        <h6 class="text-success">Hi, here is Kyle, <span></span> </h6>
       </div>
     </div>
     <div class="border p-3">
       <h3>Feature 12 - Modal</h3>
-      <div data-controller="modal" data-action="click@window->modal#close">
-        <button data-action="modal#open" class="btn btn-primary">Open First Modal</button>
-        <div class="modal" data-modal-target="modal">
+      <div>
+        <button class="btn btn-primary">Open Modal</button>
+        <div class="modal">
           <!-- Modal container -->
           <div class="modal-container">
-            <span class="float-right h3 px-2 btn btn-outline-dark cursor-pointer" data-modal-target="closeBtn"
-              data-action="click->modal#close">&times;</span>
+            <span class="float-right h3 px-2 btn btn-outline-dark cursor-pointer"
+              >&times;</span>
             <h4>First Modal Title</h4>
             <hr>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempore labore omnis vero consectetur quo fugit
@@ -235,41 +169,24 @@
           </div>
         </div>
       </div>
-
-      <div data-controller="modal" data-action="click@window->modal#close" class="mt-3">
-        <button data-action="modal#open" class="btn btn-primary">Open Second Modal</button>
-        <div class="modal" data-modal-target="modal">
-          <!-- Modal container -->
-          <div class="modal-container">
-            <span class="float-right h3 px-2 btn btn-outline-dark cursor-pointer" data-modal-target="closeBtn"
-              data-action="click->modal#close">&times;</span>
-            <h4>Second Modal Title</h4>
-            <hr>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic tempore labore omnis vero consectetur quo fugit
-              nobis facere et illo ipsam velit sed culpa tempora officia ex, at non minima? Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Voluptatum, quisquam odio molestias voluptates in ea error perspiciatis. Harum
-              dolores quas, quam quibusdam laborum, odit ipsam perferendis illum vero, beatae porro.</p>
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="border p-3" data-controller="timer slider" data-timer-duration-value="60" data-slider-input-value="60">
+    <div class="border p-3">
       <h3>Feature 13 - Pomodoro App</h3>
-      <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1"
-        max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span>
+      <label for="duration">Duration: </label><input type="range" id="duration" min="1"
+        max="120" value="60"> <small><span></span>
         minutes</small><br />
-      <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start</button>
-      <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
-      <h4 data-timer-target="display" class="text-center text-primary"></h4>
+      <button class="btn btn-primary mt-3">Start</button>
+      <button class="btn btn-secondary mt-3">Stop</button>
+      <h4 class="text-center text-primary"></h4>
     </div>
     <div class="border p-3">
       <h3>Feature 13 - Scroll Indicator</h3>
       <div class="row">
-        <div data-controller="scroll" class="col-6">
+        <div class="col-6">
           <div class="progress-container">
-            <div class="progress-bar" data-scroll-target="progressBar"></div>
+            <div class="progress-bar"></div>
           </div>
-          <div data-scroll-target="content" data-action="scroll->scroll#showProgress" class="mx-auto scroll-content">
+          <div class="mx-auto scroll-content">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
             ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
@@ -308,230 +225,33 @@
             obcaecati vitae!
           </div>
         </div>
-        <div data-controller="scroll" class="col-6">
-          <div class="progress-container">
-            <div class="progress-bar" data-scroll-target="progressBar"></div>
-          </div>
-          <div data-scroll-target="content" data-action="scroll->scroll#showProgress" class="mx-auto scroll-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
-            ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
-            neque perspiciatis suscipit porro cupiditate, eaque cum sequi distinctio, at culpa vitae aperiam?Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Error nobis, ut suscipit fugit voluptate aspernatur laborum cumque
-            expedita aliquid veritatis sunt voluptates ducimus repudiandae omnis rem? Nam sequi excepturi exercitationem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ad repellat ipsam perspiciatis odio, quia itaque
-            minima numquam, fugiat rem molestiae. Fugit nam maxime, ea eos soluta corporis molestias voluptates? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis voluptatum reiciendis accusantium quas ea nostrum atque a
-            repellat similique ducimus arch sit, amet consectetur adipisicing elit. Assumenda corporis accusantium dolorum
-            sed iusto voluptatibus obcaecati, laudantium soluta est eum velit architecto quos optio? Repellat mollitia
-            laudantium atque non delectus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eum nobis sit
-            autem, labore aperiam amet dolorem voluptas, maxime sed dolor molestiae. Repellat ipsum a rerum maiores
-            repudiandae facere! Officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab animi
-            quo eveniet, dolorum fugiat, minus voluptatibus magni commodi officia vel numquam suscipit perferendis
-            explicabo? Mollitia eveniet maxime corrupti dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            deserunt totam debitis rerum, libero excepturi accusantium repudiandae consequuntur temporibus quam, voluptas
-            nam aperiam ex reprehenderit nulla nostrum doloribus eius ad. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Fugiat provident laboriosam itaque veritatis magnam voluptatem vitae. Ullam error laudantium,
-            a sunt ducimus quisquam optio aperiam, tempore neque animi aliquam expedita! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Ratione eius, iusto impedit eum necessitatibus molestias nisi autullam, quis odio
-            blanditiis fugiat non recusandae atque deleniti laudantium deserunt quos ducimus! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Assumenda labore nihil, nobis officiis ullam, incidunt sed repellendus voluptates
-            quidem porro deserunt enim eveniet. Ullam possimus labore unde quod repudiandae assumenda. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Excepturi ullam totam omnis doloremque facilis, doloribus quaerat! Earum
-            distinctio, dolore nesciunt aperiam quo soluta placeat maxime cumque modi, iste beatae omnis! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Officia, temporibus. Voluptatum natus quam consequuntur provident quae
-            soluta minus rerum beatae enim quis non, accusamus unde, magnam harum praesentium facilis omnis? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Magni natus ipsa aperiam tempora, facilis exercitationem deleniti
-            suscipit optio molestias rerum necessitatibus unde impedit blanditiis, libero ipsam accusantium sed voluptate
-            ea! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempore nihil ea consequatur repudiandae non
-            corrupti eaque sint, dolore quisquam inventore quod dolores distinctio perferendis quia sapiente architecto
-            sequi ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, pariatur repellat ut asperiores
-            vitae sint aspernatur fugit odit quis nostrum. Quam eligendi ea officiis, deleniti veniam aspernatur. Facilis,
-            obcaecati vitae! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sint saepe ex quibusdam. Rem
-            asperiores voluptate beatae ipsam minus quod. Velit itaque officiis nihil dolor dignissimos ea veniam odit ipsa?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
-            ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
-            neque perspiciatis suscipit porro cupiditate, eaque cum sequi distinctio, at culpa vitae aperiam?Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Error nobis, ut suscipit fugit voluptate aspernatur laborum cumque
-            expedita aliquid veritatis sunt voluptates ducimus repudiandae omnis rem? Nam sequi excepturi exercitationem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ad repellat ipsam perspiciatis odio, quia itaque
-            minima numquam, fugiat rem molestiae. Fugit nam maxime, ea eos soluta corporis molestias voluptates? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis voluptatum reiciendis accusantium quas ea nostrum atque a
-            repellat similique ducimus arch sit, amet consectetur adipisicing elit. Assumenda corporis accusantium dolorum
-            sed iusto voluptatibus obcaecati, laudantium soluta est eum velit architecto quos optio? Repellat mollitia
-            laudantium atque non delectus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eum nobis sit
-            autem, labore aperiam amet dolorem voluptas, maxime sed dolor molestiae. Repellat ipsum a rerum maiores
-            repudiandae facere! Officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab animi
-            quo eveniet, dolorum fugiat, minus voluptatibus magni commodi officia vel numquam suscipit perferendis
-            explicabo? Mollitia eveniet maxime corrupti dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            deserunt totam debitis rerum, libero excepturi accusantium repudiandae consequuntur temporibus quam, voluptas
-            nam aperiam ex reprehenderit nulla nostrum doloribus eius ad. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Fugiat provident laboriosam itaque veritatis magnam voluptatem vitae. Ullam error laudantium,
-            a sunt ducimus quisquam optio aperiam, tempore neque animi aliquam expedita! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Ratione eius, iusto impedit eum necessitatibus molestias nisi autullam, quis odio
-            blanditiis fugiat non recusandae atque deleniti laudantium deserunt quos ducimus! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Assumenda labore nihil, nobis officiis ullam, incidunt sed repellendus voluptates
-            quidem porro deserunt enim eveniet. Ullam possimus labore unde quod repudiandae assumenda. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Excepturi ullam totam omnis doloremque facilis, doloribus quaerat! Earum
-            distinctio, dolore nesciunt aperiam quo soluta placeat maxime cumque modi, iste beatae omnis! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Officia, temporibus. Voluptatum natus quam consequuntur provident quae
-            soluta minus rerum beatae enim quis non, accusamus unde, magnam harum praesentium facilis omnis? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Magni natus ipsa aperiam tempora, facilis exercitationem deleniti
-            suscipit optio molestias rerum necessitatibus unde impedit blanditiis, libero ipsam accusantium sed voluptate
-            ea! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempore nihil ea consequatur repudiandae non
-            corrupti eaque sint, dolore quisquam inventore quod dolores distinctio perferendis quia sapiente architecto
-            sequi ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, pariatur repellat ut asperiores
-            vitae sint aspernatur fugit odit quis nostrum. Quam eligendi ea officiis, deleniti veniam aspernatur. Facilis,
-            obcaecati vitae! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sint saepe ex quibusdam. Rem
-            asperiores voluptate beatae ipsam minus quod. Velit itaque officiis nihil dolor dignissimos ea veniam odit ipsa?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
-            ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
-            neque perspiciatis suscipit porro cupiditate, eaque cum sequi distinctio, at culpa vitae aperiam?Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Error nobis, ut suscipit fugit voluptate aspernatur laborum cumque
-            expedita aliquid veritatis sunt voluptates ducimus repudiandae omnis rem? Nam sequi excepturi exercitationem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ad repellat ipsam perspiciatis odio, quia itaque
-            minima numquam, fugiat rem molestiae. Fugit nam maxime, ea eos soluta corporis molestias voluptates? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis voluptatum reiciendis accusantium quas ea nostrum atque a
-            repellat similique ducimus arch sit, amet consectetur adipisicing elit. Assumenda corporis accusantium dolorum
-            sed iusto voluptatibus obcaecati, laudantium soluta est eum velit architecto quos optio? Repellat mollitia
-            laudantium atque non delectus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eum nobis sit
-            autem, labore aperiam amet dolorem voluptas, maxime sed dolor molestiae. Repellat ipsum a rerum maiores
-            repudiandae facere! Officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab animi
-            quo eveniet, dolorum fugiat, minus voluptatibus magni commodi officia vel numquam suscipit perferendis
-            explicabo? Mollitia eveniet maxime corrupti dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            deserunt totam debitis rerum, libero excepturi accusantium repudiandae consequuntur temporibus quam, voluptas
-            nam aperiam ex reprehenderit nulla nostrum doloribus eius ad. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Fugiat provident laboriosam itaque veritatis magnam voluptatem vitae. Ullam error laudantium,
-            a sunt ducimus quisquam optio aperiam, tempore neque animi aliquam expedita! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Ratione eius, iusto impedit eum necessitatibus molestias nisi autullam, quis odio
-            blanditiis fugiat non recusandae atque deleniti laudantium deserunt quos ducimus! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Assumenda labore nihil, nobis officiis ullam, incidunt sed repellendus voluptates
-            quidem porro deserunt enim eveniet. Ullam possimus labore unde quod repudiandae assumenda. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Excepturi ullam totam omnis doloremque facilis, doloribus quaerat! Earum
-            distinctio, dolore nesciunt aperiam quo soluta placeat maxime cumque modi, iste beatae omnis! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Officia, temporibus. Voluptatum natus quam consequuntur provident quae
-            soluta minus rerum beatae enim quis non, accusamus unde, magnam harum praesentium facilis omnis? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Magni natus ipsa aperiam tempora, facilis exercitationem deleniti
-            suscipit optio molestias rerum necessitatibus unde impedit blanditiis, libero ipsam accusantium sed voluptate
-            ea! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempore nihil ea consequatur repudiandae non
-            corrupti eaque sint, dolore quisquam inventore quod dolores distinctio perferendis quia sapiente architecto
-            sequi ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, pariatur repellat ut asperiores
-            vitae sint aspernatur fugit odit quis nostrum. Quam eligendi ea officiis, deleniti veniam aspernatur. Facilis,
-            obcaecati vitae! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sint saepe ex quibusdam. Rem
-            asperiores voluptate beatae ipsam minus quod. Velit itaque officiis nihil dolor dignissimos ea veniam odit ipsa?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
-            ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
-            neque perspiciatis suscipit porro cupiditate, eaque cum sequi distinctio, at culpa vitae aperiam?Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Error nobis, ut suscipit fugit voluptate aspernatur laborum cumque
-            expedita aliquid veritatis sunt voluptates ducimus repudiandae omnis rem? Nam sequi excepturi exercitationem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ad repellat ipsam perspiciatis odio, quia itaque
-            minima numquam, fugiat rem molestiae. Fugit nam maxime, ea eos soluta corporis molestias voluptates? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis voluptatum reiciendis accusantium quas ea nostrum atque a
-            repellat similique ducimus arch sit, amet consectetur adipisicing elit. Assumenda corporis accusantium dolorum
-            sed iusto voluptatibus obcaecati, laudantium soluta est eum velit architecto quos optio? Repellat mollitia
-            laudantium atque non delectus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eum nobis sit
-            autem, labore aperiam amet dolorem voluptas, maxime sed dolor molestiae. Repellat ipsum a rerum maiores
-            repudiandae facere! Officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab animi
-            quo eveniet, dolorum fugiat, minus voluptatibus magni commodi officia vel numquam suscipit perferendis
-            explicabo? Mollitia eveniet maxime corrupti dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            deserunt totam debitis rerum, libero excepturi accusantium repudiandae consequuntur temporibus quam, voluptas
-            nam aperiam ex reprehenderit nulla nostrum doloribus eius ad. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Fugiat provident laboriosam itaque veritatis magnam voluptatem vitae. Ullam error laudantium,
-            a sunt ducimus quisquam optio aperiam, tempore neque animi aliquam expedita! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Ratione eius, iusto impedit eum necessitatibus molestias nisi autullam, quis odio
-            blanditiis fugiat non recusandae atque deleniti laudantium deserunt quos ducimus! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Assumenda labore nihil, nobis officiis ullam, incidunt sed repellendus voluptates
-            quidem porro deserunt enim eveniet. Ullam possimus labore unde quod repudiandae assumenda. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Excepturi ullam totam omnis doloremque facilis, doloribus quaerat! Earum
-            distinctio, dolore nesciunt aperiam quo soluta placeat maxime cumque modi, iste beatae omnis! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Officia, temporibus. Voluptatum natus quam consequuntur provident quae
-            soluta minus rerum beatae enim quis non, accusamus unde, magnam harum praesentium facilis omnis? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Magni natus ipsa aperiam tempora, facilis exercitationem deleniti
-            suscipit optio molestias rerum necessitatibus unde impedit blanditiis, libero ipsam accusantium sed voluptate
-            ea! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempore nihil ea consequatur repudiandae non
-            corrupti eaque sint, dolore quisquam inventore quod dolores distinctio perferendis quia sapiente architecto
-            sequi ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, pariatur repellat ut asperiores
-            vitae sint aspernatur fugit odit quis nostrum. Quam eligendi ea officiis, deleniti veniam aspernatur. Facilis,
-            obcaecati vitae! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sint saepe ex quibusdam. Rem
-            asperiores voluptate beatae ipsam minus quod. Velit itaque officiis nihil dolor dignissimos ea veniam odit ipsa?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quas in aliquid quibusdam nesciunt fuga cumque
-            ad ipsam eligendi dolorem, quos totam qui! Voluptate facilis mollitia iste, illum fugit quod. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Enim hic itaque excepturi quas adipisci velit voluptatum, blanditiis
-            neque perspiciatis suscipit porro cupiditate, eaque cum sequi distinctio, at culpa vitae aperiam?Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Error nobis, ut suscipit fugit voluptate aspernatur laborum cumque
-            expedita aliquid veritatis sunt voluptates ducimus repudiandae omnis rem? Nam sequi excepturi exercitationem!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ad repellat ipsam perspiciatis odio, quia itaque
-            minima numquam, fugiat rem molestiae. Fugit nam maxime, ea eos soluta corporis molestias voluptates? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis voluptatum reiciendis accusantium quas ea nostrum atque a
-            repellat similique ducimus arch sit, amet consectetur adipisicing elit. Assumenda corporis accusantium dolorum
-            sed iusto voluptatibus obcaecati, laudantium soluta est eum velit architecto quos optio? Repellat mollitia
-            laudantium atque non delectus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia eum nobis sit
-            autem, labore aperiam amet dolorem voluptas, maxime sed dolor molestiae. Repellat ipsum a rerum maiores
-            repudiandae facere! Officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab animi
-            quo eveniet, dolorum fugiat, minus voluptatibus magni commodi officia vel numquam suscipit perferendis
-            explicabo? Mollitia eveniet maxime corrupti dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            neque dolorem ab in dolorum similique quaerat nihil maiores quos inventore? Sapiente possimus est animi quis?
-            Quis, nihil. Minus, voluptas debitis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta nostrum,
-            et assumenda dignissimos explicabo exercitationem debitis ducimus, eum inventore doloremque repellat incidunt,
-            rerum distinctio fuga harum. Quibusdam provident rerum reprehenderit! Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Consectetur, tempore magni totam rerum deserunt culpa provident pariatur, voluptatum quidem
-            illum eum. Incidunt vel repellendus autem eligendi perspiciatis cumque doloremque quae! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Facilis nostrum excepturi corporis. Incidunt totam, atque provident corporis
-            repellendus fuga necessitatibus officiis recusandae error magni porro? Veniam officiis quia cum vel. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Placeat doloribus harum quod excepturi enim voluptatum perspiciatis
-            reprehenderit! Asperiores, deserunt officia, repellat accusamus, quis possimus itaque qui hic earum quia ipsum!
-            Aliquam placeat vel accusantium modi odio enim deserunt dignissimos ex dolorum sapiente odit, ab nam tempora
-            repudiandae reprehenderit omnis non eius! Non eligendi ad voluptatum neque quos ut delectus mollitia? Velit iste
-            architecto voluptatibus fuga culpa laboriosam odit ad quo repudiandae, quidem accusamus accusantium, eligendi
-            dolore. Laborum ipsam architecto, quisquam rerum quia vero qui reprehenderit harum odit omnis ad nam.
-            Dignissimos debitis corrupti eos accusantium tempora vero fugit maiores nihil, inventore asperiores tempore enim
-            magni quisquam doloribus doloremque incidunt quia necessitatibus sint facere modi totam praesentium. Maiores
-            dignissimos quos incidunt? Harum eos, beatae nemo esse illum aspernatur! Quam expedita minus officiis voluptatum
-            deserunt quia modi, ut optio, commodi tenetur dicta temporibus ipsum repellendus! A odit ex fugiat quidem earum
-            doloremque? Culpa, quas repellendus? Illum, itaque, aperiam omnis, necessitatibus error nostrum saepe
-            repudiandae rem tempora reiciendis ipsa. A dolores mollitia, esse quis, illum commodi maxime quisquam nobis quam
-            vero earum similique. Et placeat commodi voluptates tempora amet mollitia obcaecati consequatur ab laborum natus
-            reiciendis enim deleniti alias tempore modi porro vero omnis facere laboriosam blanditiis, officiis quod sed!
-            Vero, voluptatem quaerat!Harum rerum tempora nesciunt ipsam iusto deserunt enim minima natus soluta beatae, quas
-            nostrum provident repellat ex laudantium accusamus, alias id voluptatum pariatur reiciendis numquam ut. Soluta
-            minima incidunt quasi. Nemo doloribus sed, dolor consectetur earum molestias voluptas mollitia soluta totam id,
-            magni provident et veniam qui eaque similique dolorem dicta doloremque enim omnis minus consequatur quisquam!
-            Cum, architecto consequuntur. Est, cupiditate architecto ex, omnis suscipit consequuntur officiis, alias
-            temporibus laborum labore repellendus! Quidem commodi nihil reiciendis quam fuga ab distinctio deserunt dolorem
-            voluptatum unde. Tempora delectus ea sint vel.
-
-          </div>
-        </div>
       </div>
     </div>
     <div class="border p-3">
       <h3>Feature 14 - Slideshow 2</h3>
-      <div data-controller="slideshow2" class="position-relative" data-slideshow2-index-value="1">
-        <div class="slideshow2-container" data-slideshow2-target="container">
+      <div class="position-relative">
+        <div class="slideshow2-container">
           <div class="slides2-container" style="width:400%;">
             <!-- Full-width images with number and caption text -->
-            <div class="slide" data-slideshow2-target="slide">
+            <div class="slide">
               <div class="index">1 / 4</div>
               <img src="./images/img1.jpg" style="width:100%;filter: brightness(1.3);">
               <div class="caption small">Caption 1</div>
             </div>
 
-            <div class="slide" data-slideshow2-target="slide">
+            <div class="slide">
               <div class="index">2 / 4</div>
               <img src="./images/img2.jpg" style="width:100%;filter: brightness(1.3);">
               <div class="caption small">Caption 2</div>
             </div>
 
-            <div class="slide" data-slideshow2-target="slide">
+            <div class="slide">
               <div class="index">3 / 4</div>
               <img src="./images/img3.jpg" style="width:100%;filter: brightness(1.3);">
               <div class="caption small">Caption 3</div>
             </div>
 
-            <div class="slide" data-slideshow2-target="slide">
+            <div class="slide">
               <div class="index">4 / 4</div>
               <img src="./images/img4.jpg" style="width:100%;filter: brightness(1.3);">
               <div class="caption small">Caption 4</div>
@@ -542,83 +262,18 @@
 
         </div>
         <!-- Next and previous buttons -->
-        <a class="prev" data-action="click->slideshow2#prev">&#10094;</a>
-        <a class="next" data-action="click->slideshow2#next">&#10095;</a>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
 
 
         <div class="text-center">
-          <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="1"></span>
-          <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="2"></span>
-          <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="3"></span>
-          <span class="do,t" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="4"></span>
+          <span class="dot" data-slideshow2-target="dot"></span>
+          <span class="dot" data-slideshow2-target="dot"></span>
+          <span class="dot" data-slideshow2-target="dot"></span>
+          <span class="dot" data-slideshow2-target="dot"></span>
         </div>
       </div>
     </div>
-
-    <h4>Others</h4>
-    <div class="border p-3 bg-dark" data-controller="dynamic-search" data-dynamic-search-items-value='[{"name":"apple","color":"red"},{"name":"orange","color":"yellow"},{"name":"pineapple","color":"yellow"},{"name":"grape","color":"purple"},{"name":"mango","color":"yellow"},{"name":"blueberry","color":"blue"}]'>
-      <h3 class="text-light">Feature - Dynamic Search</h3>
-      <button data-action="dynamic-search#sortByName">Sort by Name</button>
-      <button data-action="dynamic-search#sortByColor">Sort by Color</button>
-      <input type="text" data-action="dynamic-search#filter" data-dynamic-search-target="input" placeholder="Search by name" data-dynamic-search-attribute-value="name"
-      >
-      <div data-dynamic-search-target="container">
-      </div>
-    </div>
-
-    <div class="border p-3">
-      <h3>Feature - Slideshow</h3>
-      <div class="slideshow-container" data-controller="slideshow" data-slideshow-index-value="1">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="" data-slideshow-target="slide">
-          <div class="numbertext">1 / 3</div>
-          <img src="./images/desk-img1.jpeg" style="width:100%;filter: brightness(1.3);">
-          <div class="caption-text">My desktop</div>
-        </div>
-
-        <div class="" data-slideshow-target="slide">
-          <div class="numbertext">2 / 3</div>
-          <img src="./images/desk-img2.jpeg" style="width:100%;filter: brightness(1.3);">
-          <div class="caption-text">Ergonomic Table</div>
-        </div>
-
-        <div class="" data-slideshow-target="slide">
-          <div class="numbertext">3 / 3</div>
-          <img src="./images/desk-img3.jpeg" style="width:100%;filter: brightness(1.3);">
-          <div class="caption-text">Fantech Gaming Chair</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" data-action="click->slideshow#prev">&#10094;</a>
-        <a class="next" data-action="click->slideshow#next">&#10095;</a>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" data-action="click->slideshow#setIndex" data-slideshow-target="dot" data-id="1"></span>
-          <span class="dot" data-action="click->slideshow#setIndex" data-slideshow-target="dot"data-id="2"></span>
-          <span class="dot" data-action="click->slideshow#setIndex"data-slideshow-target="dot" data-id="3"></span>
-        </div>
-      </div>
-    </div>
-
-
-
-    <br>
-    <br>
-    <h2 class="text-center my-3">CSS-only features</h2>
-    <div class="border p-3" class="text-center">
-      <h3>Feature - Tooltip on Hover (CSS Only)</h3>
-      <div class="text-center">
-        <div class="tooltip-item cursor-pointer">
-          Hover over me
-          <span class="tooltip-text">Tooltip text</span>
-        </div>
-      </div>
-    </div>
-
-
-
   </div>
 
 
