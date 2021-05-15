@@ -31,7 +31,7 @@
       <a href="https://github.com/Kyle-Law/stimulus-miniatures" target="_blank" class="h1"><i class="fab fa-github-square"></i></a>
     </div>
     <h1>Stimulus Miniatures</h1>
-    <h4 class="my-4 text-center text-success">Easy Section</h4>
+    <h4 class="my-4 text-center text-success">Section 1</h4>
       <div class="border p-3">
         <h3>Feature 1 - Copy to Clipboard</h3>
         <div class="d-flex">
@@ -86,14 +86,14 @@
       <div class="counters-container border p-3">
         <h3>Feature 3 - Counter</h3>
         <div class="d-flex">
-          <div class="mr-5" data-controller="counter" data-counter-score-value="0">
+          <div class="" data-controller="counter" data-counter-score-value="0">
             Red Team
             <h2 data-counter-target="display"></h2>
             <button class="btn btn-danger" data-action="counter#decrease">-</button>
             <button class="btn btn-success" data-action="counter#increase">+</button>
           </div>
 
-          <div class="" data-controller="counter" data-counter-score-value="0">
+          <div class="ml-5" data-controller="counter" data-counter-score-value="0">
             Blue Team
             <h2 data-counter-target="display"></h2>
             <button class="btn btn-danger" data-action="counter#decrease">-</button>
@@ -102,19 +102,33 @@
         </div>
       </div>
       <div class="border p-3" data-controller="dark-light" data-dark-light-target="container">
-        <h3>Feature 5 - Dark Light mode</h3>
+        <h3>Feature 4 - Dark Light mode</h3>
         <button data-dark-light-mode-value="light" data-dark-light-target="toggler" data-action="dark-light#toggleMode"
           class="btn btn-secondary">
           <i class="fas fa-sun" data-dark-light-target="icon"></i>
         </button>
       </div>
-      <div class="border p-3" data-controller="slider" data-slider-input-value="50">
-        <h3>Feature 6 - Price Slider</h3>
-        <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
-        <h6>Price: <span data-slider-target="inputDisplay"></span></h6>
+      <div class="border p-3">
+        <h3>Feature 5 - Price Slider</h3>
+        <div data-controller="slider" data-slider-input-value="50">
+          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
+          <h6>Price: <span data-slider-target="inputDisplay"></span></h6>
+        </div>
+        <div data-controller="slider" data-slider-input-value="50">
+          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
+          <h6>Weight: <span data-slider-target="inputDisplay"></span></h6>
+        </div>
+        <div data-controller="slider" data-slider-input-value="50">
+          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
+          <h6>Height: <span data-slider-target="inputDisplay"></span></h6>
+        </div>
+        <div data-controller="slider" data-slider-input-value="50">
+          <input type="range" min="1" max="100" value="50" data-action="slider#setInput">
+          <h6>Score: <span data-slider-target="inputDisplay"></span></h6>
+        </div>
       </div>
       <div class="border p-3">
-        <h3>Feature 10 - Select / De-select All</h3>
+        <h3>Feature 6 - Select / De-select All</h3>
         <div data-controller="checkbox" data-checkbox-target="container">
           <button data-action="checkbox#selectAll" class="btn btn-primary">Select All</button>
           <button data-action="checkbox#deselectAll" class="btn btn-secondary">De-select All</button><br>
@@ -131,7 +145,7 @@
         </div>
       </div>
       <div class="border p-3">
-        <h3>Feature 15 - Progress Bar</h3>
+        <h3>Feature 7 - Progress Bar</h3>
         <div data-controller="progress-bar" data-progress-bar-current-progress-value="1">
           <div class="outer-bar">
             <div class="inner-bar bg-success" data-progress-bar-target="innerBar"></div>
@@ -150,14 +164,14 @@
         </div>
       </div>
       <div class="border p-3" data-controller="timer" data-timer-expiry-value="0">
-        <h3>Feature 7 - Countdown Timer</h3>
+        <h3>Feature 8 - Countdown Timer</h3>
         <input type="datetime-local" min="" data-timer-target="dateTimeInput" class="form-control w-50">
         <button data-timer-target="startBtn" data-action="timer#start" class="btn btn-primary mt-3">Start Count Down</button>
         <button data-timer-target="stopBtn" data-action="timer#stop" class="btn btn-secondary mt-3">Stop</button>
         <h4 data-timer-target="display" class="text-center text-primary"></h4>
       </div>
       <div class="border p-3">
-        <h3>Feature 14 - Snackbar</h3>
+        <h3>Feature 9 - Snackbar</h3>
         <div class="d-flex">
           <div data-controller="snackbar">
             <button class="btn btn-primary" data-action="snackbar#show">Show snackbar 1</button>
@@ -176,9 +190,9 @@
         </div>
       </div>
 
-    <h4 class="my-3 text-center text-danger">Hard Section</h4>
+    <h4 class="my-3 text-center text-danger">Section 2</h4>
     <div class="border p-3">
-      <h3>Feature 11 - Todo List</h3>
+      <h3>Feature 10 - Todo List</h3>
       <div data-controller="todo">
         <form class="row pl-3 my-3" data-action="todo#add">
           <input type="text" data-todo-target="input" class="form-control col-4 mr-2"><button
@@ -195,7 +209,7 @@
       </div>
     </div>
     <div class="border p-3">
-      <h3>Feature 9 - TypeWriter Effect</h3>
+      <h3>Feature 11 - TypeWriter Effect</h3>
       <div data-controller="typewriter"
         data-typewriter-text-value='["a Full Stack Software Engineer.","a Amateur Chess Player.","from Johor Bahru, Malaysia."]'>
         <h6 class="text-success">Hi, here is Kyle, <span data-typewriter-target="display"></span> </h6>
@@ -240,7 +254,7 @@
       </div>
     </div>
     <div class="border p-3" data-controller="timer slider" data-timer-duration-value="60" data-slider-input-value="60">
-      <h3>Feature 8 - Pomodoro App</h3>
+      <h3>Feature 13 - Pomodoro App</h3>
       <label for="duration">Duration: </label><input data-timer-target="durationInput" type="range" id="duration" min="1"
         max="120" value="60" data-action="slider#setInput"> <small><span data-slider-target="inputDisplay"></span>
         minutes</small><br />
@@ -494,7 +508,7 @@
       </div>
     </div>
     <div class="border p-3">
-      <h3>Feature 17 - Slideshow 2</h3>
+      <h3>Feature 14 - Slideshow 2</h3>
       <div data-controller="slideshow2" class="position-relative" data-slideshow2-index-value="1">
         <div class="slideshow2-container" data-slideshow2-target="container">
           <div class="slides2-container" style="width:400%;">
@@ -536,14 +550,14 @@
           <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="1"></span>
           <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="2"></span>
           <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="3"></span>
-          <span class="dot" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="4"></span>
+          <span class="do,t" data-action="click->slideshow2#setIndex" data-slideshow2-target="dot" data-id="4"></span>
         </div>
       </div>
     </div>
 
     <h4>Others</h4>
     <div class="border p-3 bg-dark" data-controller="dynamic-search" data-dynamic-search-items-value='[{"name":"apple","color":"red"},{"name":"orange","color":"yellow"},{"name":"pineapple","color":"yellow"},{"name":"grape","color":"purple"},{"name":"mango","color":"yellow"},{"name":"blueberry","color":"blue"}]'>
-      <h3 class="text-light">Feature 4 - Dynamic Search</h3>
+      <h3 class="text-light">Feature - Dynamic Search</h3>
       <button data-action="dynamic-search#sortByName">Sort by Name</button>
       <button data-action="dynamic-search#sortByColor">Sort by Color</button>
       <input type="text" data-action="dynamic-search#filter" data-dynamic-search-target="input" placeholder="Search by name" data-dynamic-search-attribute-value="name"
@@ -553,7 +567,7 @@
     </div>
 
     <div class="border p-3">
-      <h3>Feature 16 - Slideshow</h3>
+      <h3>Feature - Slideshow</h3>
       <div class="slideshow-container" data-controller="slideshow" data-slideshow-index-value="1">
 
         <!-- Full-width images with number and caption text -->

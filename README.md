@@ -8,27 +8,36 @@ StimulusJS is ...
 
 ![image](https://user-images.githubusercontent.com/55923773/118135825-0892bc80-b436-11eb-8838-d13937b356bc.png)
 
-### Mini-Projects Outline
+## Presentation
+- Live Link: https://stimulus-miniatures.herokuapp.com/
+- Tutorial Link:
+
+## Feature Outline
+
+#### 1. Section 1
 
 |No|Name|Learning points|
 |---|---|---|
 |1|Copy to Clipboard||
 |2|Accordian||
 |3|Counter App||
-|4|Dynamic Search||
-|5|Dark/Light mode||
-|6|Price Slider||
-|7|Countdown Timer||
-|8| Pomodoro App||
-|9| TypeWriter Effect|
-|10|Select/De-select All||
-|11|Todo List||
+|4|Dark/Light mode||
+|5|Price Slider||
+|6|Select / Deselect All||
+|7| Progress Bar||
+|8| Countdown Timer|
+|9|Snackbar||
+
+##### 2. Section 2
+
+|No|Name|Learning points|
+|---|---|---|
+|10|Todo List||
+|11|TypeWriter Effect||
 |12|Modal||
-|13|Scroll Indicator||
-|14|Snackbar||
-|15|Progress Bar||
-|16|Slideshow (d-block/d-none)||
-|17|Slideshow (Horizontal Scrolling)||
+|13|Pomodoro App||
+|14|Scroll Indicator||
+|15|Slideshow||
 
 ## Built With
 
