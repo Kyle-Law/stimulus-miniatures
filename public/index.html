@@ -101,12 +101,14 @@
           </div>
         </div>
       </div>
-      <div class="border p-3" data-controller="dark-light" data-dark-light-target="container">
+      <div class="border p-3">
         <h3>Feature 4 - Dark Light mode</h3>
-        <button data-dark-light-mode-value="light" data-dark-light-target="toggler" data-action="dark-light#toggleMode"
-          class="btn btn-secondary">
-          <i class="fas fa-sun" data-dark-light-target="icon"></i>
-        </button>
+        <div data-controller="dark-light" data-dark-light-target="container" class="theme p-3">
+          <button data-dark-light-mode-value="light" data-dark-light-target="toggler" data-action="dark-light#toggleMode">
+            <i class="fas fa-sun" data-dark-light-target="icon"></i>
+          </button>
+          <h5>Some text over here...</h5>
+        </div>
       </div>
       <div class="border p-3">
         <h3>Feature 5 - Price Slider</h3>

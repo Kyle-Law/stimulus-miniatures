@@ -20,15 +20,13 @@ export default class extends Controller {
   }
 
   darkMode(){
-    this.containerTarget.classList.add('bg-dark','text-light')
-    this.iconTarget.className = "fas fa-moon"
-    this.togglerTarget.className = 'btn btn-secondary'
+    this.iconTarget.classList.replace('fa-sun','fa-moon')
+    this.containerTarget.setAttribute('data-theme','dark')
   }
 
   lightMode(){
-    this.containerTarget.classList.remove('bg-dark','text-light')
-    this.iconTarget.className = "fas fa-sun"
-    this.togglerTarget.className = 'btn btn-light'
+    this.iconTarget.classList.replace('fa-moon','fa-sun')
+    this.containerTarget.setAttribute('data-theme','light')
   }
 
 }
