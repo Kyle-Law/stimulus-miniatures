@@ -17,6 +17,14 @@ i.rotate-180 {
   transform: rotate(180deg);
 }
 
+i.rotate--180 {
+  transform: rotate(-180deg);
+}
+
+i.rotate--90 {
+  transform: rotate(-180deg);
+}
+
 .details {
   transition: max-height 0.2s ease-out;
   max-height: 0;
