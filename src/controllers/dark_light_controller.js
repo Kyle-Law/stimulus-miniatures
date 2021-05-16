@@ -3,7 +3,7 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
   static values = {mode: String}
-  static targets = ["container","toggler","icon"]
+  static targets = ["icon"]
 
 
   connect() {
@@ -21,12 +21,10 @@ export default class extends Controller {
 
   darkMode(){
     this.iconTarget.classList.replace('fa-sun','fa-moon')
-    this.containerTarget.setAttribute('data-theme','dark')
   }
 
   lightMode(){
     this.iconTarget.classList.replace('fa-moon','fa-sun')
-    this.containerTarget.setAttribute('data-theme','light')
   }
 
 }
