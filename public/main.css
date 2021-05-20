@@ -306,11 +306,11 @@ i.rotate--90 {
 
 /* FE16 - Slideshow */
 /* Slideshow container */
-.slideshow-container {
+/* .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
+} */
 
 /* Hide the images by default */
 .display-none {
@@ -406,7 +406,7 @@ i.rotate--90 {
   position: relative;
 }
 
-.slideshow2-container {
+.slideshow-container {
   border-radius: 5px;
   overflow: hidden;
   margin: 0 auto;
@@ -414,14 +414,14 @@ i.rotate--90 {
   scroll-behavior: smooth;
 }
 
-.slideshow2-container .dots-container {
+.slideshow-container .dots-container {
   position: absolute;
   bottom: 0;
   z-index: 2;
   width: 100%;
 }
 
-.slides2-container {
+.slides-container {
   display: flex;
   height: 500px;
 }
