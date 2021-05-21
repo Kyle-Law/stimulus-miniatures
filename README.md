@@ -2,7 +2,7 @@
 
 > My mini-projects with StimulusJS
 
-StimulusJS is ...
+StimulusJS is a modest JavaScript framework built by Basecamp in Feb 2018, and updated to Version 2.0.0 in Dec 2020 with the additional Value & Class API. This repo stores all my experiments with StimulusJS 2.0.0.
 
 ## Project Snapshots
 
@@ -11,33 +11,6 @@ StimulusJS is ...
 ## Presentation
 - Live Link: https://stimulus-miniatures.herokuapp.com/
 - Tutorial Link:
-
-## Feature Outline
-
-#### 1. Section 1
-
-|No|Name|Learning points|
-|---|---|---|
-|1|Copy to Clipboard||
-|2|Accordian||
-|3|Counter App||
-|4|Dark/Light mode||
-|5|Price Slider||
-|6|Select / Deselect All||
-|7| Progress Bar||
-|8| Countdown Timer|
-|9|Snackbar||
-
-##### 2. Section 2
-
-|No|Name|Learning points|
-|---|---|---|
-|10|Todo List||
-|11|TypeWriter Effect||
-|12|Modal||
-|13|Pomodoro App||
-|14|Scroll Indicator||
-|15|Slideshow||
 
 ## Built With
 
@@ -49,8 +22,6 @@ StimulusJS is ...
 2. Run `yarn install` in command line to install gems.
 3. Run `yarn start` and open browser with `http://localhost:9000/`.
 4. Enjoy :)
-
-
 
 ## Authors
 
@@ -69,8 +40,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
-- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+- [StimulusJS](https://github.com/hotwired/stimulus)
 
 ## 📝 License
 
