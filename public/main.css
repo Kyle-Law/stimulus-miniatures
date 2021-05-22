@@ -22,7 +22,7 @@ i.rotate--180 {
 }
 
 i.rotate--90 {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }
 
 .details {
