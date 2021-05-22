@@ -1,6 +1,6 @@
 # Stimulus Miniatures
 
-> My mini-projects with StimulusJS
+> My 15+ mini-projects with StimulusJS
 
 StimulusJS is a modest JavaScript framework built by Basecamp in Feb 2018, and updated to Version 2.0.0 in Dec 2020 with the additional Value & Class API. This repo stores all my experiments with StimulusJS 2.0.0.
 
@@ -19,7 +19,7 @@ StimulusJS is a modest JavaScript framework built by Basecamp in Feb 2018, and u
 ## Deployment
 
 1. Git clone this repo and cd the to the directory.
-2. Run `yarn install` in command line to install gems.
+2. Run `yarn install` in command line to install packages.
 3. Run `yarn start` and open browser with `http://localhost:9000/`.
 4. Enjoy :)
 
