@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": ">=11"
+    "node": "16"
   },
   "dependencies": {
     "@babel/core": "^7.10.5",
