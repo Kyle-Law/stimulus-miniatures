@@ -1,29 +1,22 @@
-import { Controller } from "stimulus"
+import { Controller } from "stimulus";
 
 export default class extends Controller {
-
-  static targets = ["snackbar"]
-  static timeout
+  static targets = ["snackbar"];
+  static timeout;
 
   connect() {
-    console.log("Snackbar controller is connected")
+    console.log("Snackbar controller is connected");
   }
 
-  show(){
-    // remove previous snackbar
-    this.snackbarTarget.classList.remove('show')
-    clearTimeout(this.timeout)
-    setTimeout(()=>{
-      this.snackbarTarget.classList.add("show");
-
-      // After 2.9s(when it's faded out), remove show class
-      this.timeout = setTimeout(() => {
-        console.log('timing out')
-        this.snackbarTarget.classList.remove('show')
-      }, 2900);
-    },10)
-
-
+  show() {
+    this.snackbarTarget.classList.add('show');
+    this.timeout = setTimeout(() => {
+      this.removeClass();
+    }, 3000);
   }
 
+  removeClass() {
+    this.snackbarTarget.classList.remove('show');
+    clearTimeout(this.timeout);
+  }
 }
