@@ -9,7 +9,7 @@ StimulusJS is a modest JavaScript framework built by Basecamp in Feb 2018, and u
 ![image](https://user-images.githubusercontent.com/55923773/118135825-0892bc80-b436-11eb-8838-d13937b356bc.png)
 
 ## Presentation
-- Live Link: https://stimulus-miniatures.herokuapp.com/
+- Live Link: https://stimulus-miniatures.glitch.me/
 - Tutorial Link:
 
 ## Built With
